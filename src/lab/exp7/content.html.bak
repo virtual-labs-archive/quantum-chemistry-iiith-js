@@ -1,0 +1,123 @@
+<script type='text/javascript' src='../js/MathJax/MathJax.js'></script>
+
+<h1 id="main-title"> Eigen Systems: Geometrical Interpretation
+</h1>
+
+<div id="introduction">
+<h2>Introduction</h2>
+Numerical computation in Quantum Mechanics (and quantum chemistry, in particular) uses the 
+techniques and language of Linear Algebra, by usage of vectors, matrices and various 
+operations on them.
+
+<p> <br>
+General Motivation: The wave function of a state of the system is typically represented by a vector 
+( for the coeffecients) on a basis. The Operators are naturally represened 
+as matrices over this basis. Since all properties are expectation values of the a particular
+operators, we see that we are required to multiply a vector with a matrix. Thus understanding
+matrix operations (on a vector, in particular) becomes paramount for understanding 
+the numerical methodology of quantum mechanics. 
+
+<p><br>
+Application of variational theorem (in the matrix formulation) would require a
+a solution to a set of linear equations; they are of  type 
+\( {\bf A} \vec x = \vec b \), where matrix \( {\bf A }\) and vector \(\vec b\) are 
+known, and a solution for vector \( \vec x \) has to be found. Also, the Schrodinger equation 
+\(\hat H \psi = E \psi \) is also naturally converted to a matrix equation on a basis set 
+\( {\bf H} \vec c = E \vec c \), which is an Eigen System. Understanding the solutions 
+ for such Eigen systems are the main goal of this experiment.
+</div>
+
+<div id="theory">
+<h2>Theory</h2>
+
+ Please see the theory section of the Huckel Molecular Orbital theory, as an example of
+how analyis of linear systems and an eigen system is solved to obtain the electronic structure
+of the molecule/s.
+
+<p><br> A system of linear equations of the type:
+$$ \sum_{j=1}^{N}~ c_{ij} x_j = b x_j, ~for~each~i = 1, 2, \cdots,N$$
+can be written in matrix formulation as:
+$$ {\bf C } {\vec x} = b {\vec x}$$
+where matrix \( {\bf C}\) has elements \(c_{ij}\) is the only known quantity in the equation; both  and \(b\) (which is a is scalar constant) and the vector \(\vec x\) are to be determined. The left hand side of the equation, \( {\bf C} \vec x\) can be thought of as an operation 
+on the vector \( \vec x\), resulting in another vector given by the right hand side \( b \vec x\), which has the same direction as the original vector, but is scaled by a factor \(b\). 
+
+<p><br> Rewriting the above equation, we get
+$$ ({\bf C } - b  {\bf I} ) \vec x = 0 $$
+where \(\bf I\) is the Identity matrix. Consider the case where a product of two scalar 
+quantities equals zero; this would imply that either one or both of the scalars are zero. 
+Similarly, for the case were \( {\bf M } \vec x =0 \), if we ignore the trivial solution 
+\( \vec x =0\), the requirement is that the determinant of \( {\bf M}\) equal zero; i.e. 
+$$ {\bf det M} = {\bf det} ( {\bf C} -b {\bf I})= 0$$
+where the only unknown quantity is \(b\). This determinant  is a \(N\)-th order polynomial 
+in \(b\), and will have \(N\) solutions for \(b\). 
+
+<p><br>When the matrix \(\bf C\) is symmetric, we are assured that the roots of the 
+equation \({\bf det} ( {\bf C} -b {\bf I})= 0\) are always real.
+
+
+</div>
+
+
+<div id="manual">
+<h2>Manual</h2>
+
+<ol>
+  <li> In the first stage, a matrix \(M\) is given. Note that the matrix is symmetric. 
+The eigen values and eigen vectors of matrix \(M\) are given. 
+In the applet to the right, you will be selecting vector \(P\) and notice the vector \(Q \) displayed, which is the calculated as \(Q = M P\) . Notice the ratio of projections of vector \(Q\) on the eigen vectors. Complete the quiz go to the next stage. 
+  <li> In this stage, you will be selecting vectors \(P\) of same length, and notice the length of the resultant vector \(Q = M P\) .  When is the length of \(Q\) maximum or minimum ?
+</ol> 
+</div>
+
+<div id="experiment">
+<h2>Experiment</h2>
+<a href="experiment/index.php" target="_blank"> Experiment  </a>
+</div>
+
+<div id="quiz">
+<h2>Quiz</h2>
+
+<p>
+<b>Q1.</b> A minimal valence basis set is the one in which<br>
+<input name="q1" id="q1" value="3" type="radio"> <font color="black">
+Always gives lower energy </font> <br>
+<input name="q1" id="q1" value="2" type="radio"><font color="black">
+Is optimized for small molecules </font> <br>
+<input name="q1" id="q1" value="1" type="radio"> <font color="black">
+Contains one basis function for each atomic orbital </font> <br>
+<input name="q1" id="q1" value="0" type="radio"><font color="black">
+None of the above </font> <br>
+<br>
+
+<br>
+<input value="Submit Answers" type="submit"> </p>
+</div>
+
+<div id="references"><br>
+  <h2>References</h2>
+  <ol> 
+     <li> An excellent coverage of the mathematical aspects is available in "Advanced Engineering Mathematics" by E. Kreyzig 8th Edition , Wiley-India Edition (Wiley & Sons). In particular, the following chapters provide reading material for the lab:
+       <ul> 
+        <li> Chapter 6: Linear system of equations
+        <li> Chapter 7: Eigen systems
+       </ul>
+     <li> Wikipedia article on Eigensystems is quite informative of applications in various fields of science and engineering: <a href="http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors" target="_blank">http://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors</a>
+    </ol>
+     
+   
+
+  
+
+</div>
+</body></html>
+
+
+<div id="feedback">
+      <h2>
+               <a href="http://virtual-labs.ac.in/feedback/" target="_blank">Feedback</a>
+                  </h2>
+               </div>
+
+
+</body></html>
+
